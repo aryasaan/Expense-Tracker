@@ -38,7 +38,7 @@ const Home = () => {
       {/* Quick Navigation Buttons */}
       <div className="flex space-x-4 mb-8">
         <Link
-          to="/dashboard"
+          to="/expenses"
           className="bg-blue-500 text-white px-6 py-3 rounded shadow hover:bg-blue-600 transition"
         >
           Go to Dashboard

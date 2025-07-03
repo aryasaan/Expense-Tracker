@@ -10,7 +10,7 @@ export const getExpenses = async (req, res) => {
   }
 };
 
-// @desc    Create new expense
+//    Create new expense
 export const addExpense = async (req, res) => {
   const { amount, category, description, date } = req.body;
 
@@ -24,7 +24,7 @@ export const addExpense = async (req, res) => {
   }
 };
 
-// @desc    Update expense
+//    Update expense
 export const updateExpense = async (req, res) => {
   try {
     const updatedExpense = await Expense.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -34,7 +34,7 @@ export const updateExpense = async (req, res) => {
   }
 };
 
-// @desc    Delete expense
+//     Delete expense
 export const deleteExpense = async (req, res) => {
   try {
     await Expense.findByIdAndDelete(req.params.id);
@@ -43,3 +43,16 @@ export const deleteExpense = async (req, res) => {
     res.status(400).json({ message: error.message });
   }
 };
+
+export const getExpenseById = async (req, res) => {
+  try {
+    const expense = await Expense.findById(req.params.id); 
+    if (!expense) {
+      return res.status(404).json({ message: 'Expense not found' });
+    }
+    res.json(expense);
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+};
+

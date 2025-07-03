@@ -11,7 +11,7 @@ function Expenses() {
   useEffect(() => {
     const fetchExpenses = async () => {
       const res = await axios.get('http://localhost:5000/api/expenses');
-      setExpenses(res.data.data);
+      setExpenses(res.data);
     };
 
     fetchExpenses();
@@ -52,7 +52,7 @@ function Expenses() {
                 <td className="py-2 px-3">{exp.description}</td>
                 <td className="py-2 px-3 flex gap-2 justify-center">
                   <button
-                    onClick={() => setCurrentExpense(exp)}
+                    onClick={() => setCurrentExpense(exp._id)}
                     className="text-blue-500 hover:underline"
                   >
                     Edit
