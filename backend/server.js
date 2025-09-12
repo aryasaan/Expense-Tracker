@@ -7,7 +7,14 @@ import expenseRoutes from './routes/expenseRoutes.js';
 dotenv.config();
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173", 
+    "https://expense-tracker-fin.netlify.app/"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 
 // Middleware
 app.use(express.json());
