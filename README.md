@@ -2,6 +2,12 @@
 
 A simple, user-friendly web application to track your income and expenses.
 
+#### Demo link
+
+<pre>
+  <a href="https://expense-tracker-fin.netlify.app/dashboard">https://expense-tracker-fin.netlify.app/</a>
+</pre>
+
 ## Features
 
 - Add, edit, and delete transactions
