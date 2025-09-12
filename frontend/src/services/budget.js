@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/budgets';
+const API_URL = 'https://expense-tracker-fintracker.onrender.com/api'||'http://localhost:5000/api/budgets';
 
 export const getBudgets = async () => {
   try {
