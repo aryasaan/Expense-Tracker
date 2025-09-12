@@ -7,14 +7,7 @@ import expenseRoutes from './routes/expenseRoutes.js';
 dotenv.config();
 const app = express();
 
-app.use(cors({
-  origin: [
-    "http://localhost:3000",
-    "https://expense-tracker-fintracker.onrender.com"
-  ],
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
-}));
+app.use(cors());
 
 // Middleware
 app.use(express.json());
