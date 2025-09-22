@@ -14,6 +14,9 @@ A simple, user-friendly web application to track your income and expenses.
 - View balance, income, and expenses
 - Persistent storage (localStorage / backend ready)
 - Responsive and mobile-friendly design
+- Chart visualization
+- fetching last 7d, 30, 1yr data
+- quick add suggestions.
 
 ---
 
